@@ -23,6 +23,8 @@ const bebidas = productos.filter(tipo => tipo.tipo == "bebida");
 
 // - checkout
 
+let checkout = [];
+let checkoutArray = (clave, valor) => { localStorage.setItem(clave, valor) };
 class listaCheckout {
     constructor(nombre, precio, cantidad, subtotal) {
         this.nombre = nombre;
@@ -31,9 +33,6 @@ class listaCheckout {
         this.subtotal = subtotal;
     }
 }
-let checkout = [];
-let checkoutArray = (clave, valor) => { localStorage.setItem(clave, valor) };
-
 
 // - variables
 let i = 1;
@@ -149,5 +148,4 @@ function actualizarCarrito(){
     
 }
 // -------------------------------- Ejecuciones ---------------------------------- //
-
 bajarCarritoJSON()
