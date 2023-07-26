@@ -1,0 +1,72 @@
+[{
+    "id":1,
+    "nombre":"Rutini Caberner-Malbec",
+    "tipo":"vino",
+    "precio":3450
+ },
+ {
+    "id":2,
+    "nombre":"Nicasia Malbec",
+    "tipo":"vino",
+    "precio":1860
+ },
+ {
+    "id":3,
+    "nombre":"Trumpeter Malbec",
+    "tipo":"vino",
+    "precio":2050
+ },
+ {
+    "id":4,
+    "nombre":"Escorihuela Cabernet Sauvignon",
+    "tipo":"vino",
+    "precio":1670
+ },
+ {
+    "id":5,
+    "nombre":"Nieto Senetiner Brut Nature",
+    "tipo":"espumante",
+    "precio":2250
+ },
+ {
+    "id":6,
+    "nombre":"Nieto Senetiner Extra Brut",
+    "tipo":"espumante",
+    "precio":2150
+ },
+ {
+    "id":7,
+    "nombre":"Baron.B",
+    "tipo":"espumante",
+    "precio":4905
+ },
+ {
+    "id":8,
+    "nombre":"Baron.B Rosé",
+    "tipo":"espumante",
+    "precio":6100
+ },
+ {
+    "id":9,
+    "nombre":"Johnnie Walker Red Label",
+    "tipo":"bebida",
+    "precio":5640
+ },
+ {
+    "id":10,
+    "nombre":"Johnnie Walker Black Label",
+    "tipo":"bebida",
+    "precio":9700
+ },
+ {
+    "id":11,
+    "nombre":"Absolut Vodka",
+    "tipo":"bebida",
+    "precio":5520
+ },
+ {
+    "id":12,
+    "nombre":"Jack Daniels",
+    "tipo":"bebida",
+    "precio":10764
+ }]

@@ -15,16 +15,30 @@ const productos = [
     { id: 12, nombre: "Jack Daniels", tipo: "bebida", precio: 10764 },
 ];
 
-// - filtros
+// prototipo fetch
 
-const vino = productos.filter(tipo => tipo.tipo == "vino");
+// fetch(`./productos.json`)
+//     .then(response => response.json())
+//     .then((productos) => {
+//         let vino = productos.filter(tipo => tipo.tipo == "vino")
+//         vino.forEach(vino => {
+//             console.log(`nombre: ${vino.nombre} | precio: ${vino.precio}`)
+//         })
+//     })
+
+
+// - filtros (no hacen falta)
+
+// const vino = productos.filter(tipo => tipo.tipo == "vino");
 const espumante = productos.filter(tipo => tipo.tipo == "espumante");
 const bebidas = productos.filter(tipo => tipo.tipo == "bebida");
 
 // - checkout
 
 let checkout = [];
+
 let checkoutArray = (clave, valor) => { localStorage.setItem(clave, valor) };
+
 class listaCheckout {
     constructor(nombre, precio, cantidad, subtotal) {
         this.nombre = nombre;
@@ -41,23 +55,6 @@ let cantidad = 1;
 let idBebida;
 
 // ------------------------------ Funciones ------------------------------------ //
-
-function printVinos() {
-
-    vino.forEach(Vino => {
-
-        let tablaVino = document.getElementById("tablaVinos")
-        let lista = document.createElement("tr");
-        lista.innerHTML =
-            `<tr>
-        <th scope="row"> ${i++} </th>
-        <td> ${Vino.nombre} </td>
-        <td> $ ${Vino.precio} </td>
-        <td> <button type="button" class="btn btn-primary" id="btn-agregar${Vino.id}">agregar</button> </td>
-      </tr>`
-        tablaVino.appendChild(lista);
-    });
-};
 
 function printEspumantes() {
 
@@ -132,20 +129,21 @@ function borrarCarrito() {
     tablaCheckOut.remove()
 }
 
-function actualizarCarrito(){
+function actualizarCarrito() {
     let listaCheckOut = document.getElementsByClassName("tablaCheckOut")[0]
     let lineaProductosCheckOut = listaCheckOut.getElementsByClassName("row-productos")
     let totalCheckOut = 0
-    for (let i=0; i< lineaProductosCheckOut.length; i++) {
+    for (let i = 0; i < lineaProductosCheckOut.length; i++) {
         let lineaProductos = lineaProductosCheckOut[i]
         let productoPrecio = lineaProductos.getElementsByClassName("precio-producto")[0]
         let productoCantidad = lineaProductos.getElementsByClassName("cantidad-producto")[0]
         let precio = parseFloat(productoPrecio.innerText.replace("$", ""))
         let cantidad = parseFloat(productoCantidad.innerText)
-        totalCheckOut = totalCheckOut + (precio*cantidad)
+        totalCheckOut = totalCheckOut + (precio * cantidad)
     }
     document.getElementById("totalCheckOut").innerText = "total:  $" + totalCheckOut
-    
+
 }
 // -------------------------------- Ejecuciones ---------------------------------- //
+
 bajarCarritoJSON()
