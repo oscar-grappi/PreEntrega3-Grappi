@@ -34,7 +34,7 @@ function agregarAlCarritoRCM() {
     fetch(`../productos.json`)
         .then(response => response.json())
         .then((productos) => {
-            vino = productos.filter(tipo => tipo.tipo == "vino")
+            let vino = productos.filter(tipo => tipo.tipo == "vino")
             checkout.push(new listaCheckout(vino[0].nombre, vino[0].precio, qPred, (vino[0].precio * qPred)));
             let agregado = document.getElementById("btn-agregar1")
             agregado.classList.add("disabled")
@@ -48,7 +48,7 @@ function agregarAlCarritoNM() {
     fetch(`../productos.json`)
         .then(response => response.json())
         .then((productos) => {
-            vino = productos.filter(tipo => tipo.tipo == "vino")
+            let vino = productos.filter(tipo => tipo.tipo == "vino")
             checkout.push(new listaCheckout(vino[1].nombre, vino[1].precio, qPred, (vino[1].precio * qPred)));
             let agregado = document.getElementById("btn-agregar2")
             agregado.classList.add("disabled")
@@ -62,7 +62,7 @@ function agregarAlCarritoTM() {
     fetch(`../productos.json`)
         .then(response => response.json())
         .then((productos) => {
-            vino = productos.filter(tipo => tipo.tipo == "vino")
+            let vino = productos.filter(tipo => tipo.tipo == "vino")
             checkout.push(new listaCheckout(vino[2].nombre, vino[2].precio, qPred, (vino[2].precio * qPred)));
             let agregado = document.getElementById("btn-agregar3")
             agregado.classList.add("disabled")
@@ -76,7 +76,7 @@ function agregarAlCarritoECS() {
     fetch(`../productos.json`)
         .then(response => response.json())
         .then((productos) => {
-            vino = productos.filter(tipo => tipo.tipo == "vino")
+            let vino = productos.filter(tipo => tipo.tipo == "vino")
             checkout.push(new listaCheckout(vino[3].nombre, vino[3].precio, qPred, (vino[3].precio * qPred)));
             let agregado = document.getElementById("btn-agregar4")
             agregado.classList.add("disabled")
