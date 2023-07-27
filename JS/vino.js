@@ -15,7 +15,7 @@ fetch(`../productos.json`)
               </tr>`
             tablaVino.appendChild(lista);
         });
-        
+
         let botonAgregarRCM = document.getElementById("btn-agregar1")
         botonAgregarRCM.onclick = () => { agregarAlCarritoRCM() }
 
@@ -28,10 +28,6 @@ fetch(`../productos.json`)
         let botonAgregarECS = document.getElementById("btn-agregar4")
         botonAgregarECS.onclick = () => { agregarAlCarritoECS() }
     });
-
-
-
-
 
 function agregarAlCarritoRCM() {
     let qPred = 1;

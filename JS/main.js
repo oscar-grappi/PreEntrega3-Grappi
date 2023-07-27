@@ -117,7 +117,7 @@ function guardarCarritoJSON() {
 };
 
 function bajarCarritoJSON() {
-    checkout = JSON.parse(localStorage.getItem("listaArray"))
+    checkout = JSON.parse(localStorage.getItem("listaArray")) || [];
 }
 
 function borrarCarrito() {
