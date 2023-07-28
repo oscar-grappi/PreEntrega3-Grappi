@@ -11,6 +11,8 @@ for (let i = 0; i < cantidadInputs.length; i++) {
         if (isNaN(input.value) || input.value <= 0) {
             input.value = 1
         }
+        checkout[i].cantidad = input.value
+        guardarCarritoJSON();
         actualizarCarrito();
     })
 }
@@ -22,7 +24,10 @@ for (let i = 0; i < botonRemover.length; i++) {
     boton.addEventListener("click", function (event) {
         let botonClickeado = event.target
         botonClickeado.parentElement.parentElement.remove()
-        actualizarCarrito()
+        let checkoutFake = checkout.splice(i,1)
+        guardarCarritoJSON();
+        actualizarCarrito();
+        location.reload();
     })
 }
 
@@ -50,3 +55,10 @@ botonComprar.onclick = () => {
         alert("no se completo la compra, su carrito seguirá guardado")
     }
 }
+
+// let idObjeto = checkout.findIndex(obj => {
+//     return obj.id === 8
+// })
+// console.log(idObjeto)
+
+// checkout[0].cantidad = document.getElementsByClassName("cantidadProductos")[i]

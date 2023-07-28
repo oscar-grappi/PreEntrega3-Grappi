@@ -36,7 +36,7 @@ function agregarAlCarritoNSBN() {
         .then(response => response.json())
         .then((productos) => {
             let espumante = productos.filter(tipo => tipo.tipo == "espumante")
-            checkout.push(new listaCheckout(espumante[0].nombre, espumante[0].precio, qPred, (espumante[0].precio * qPred)));
+            checkout.push(new listaCheckout(espumante[0].id, espumante[0].nombre, espumante[0].precio, qPred, (espumante[0].precio * qPred)));
             let agregado = document.getElementById("btn-agregar5")
             agregado.classList.add("disabled")
             agregado.innerText = "Agregado!"
@@ -50,7 +50,7 @@ function agregarAlCarritoNSEB() {
         .then(response => response.json())
         .then((productos) => {
             let espumante = productos.filter(tipo => tipo.tipo == "espumante")
-            checkout.push(new listaCheckout(espumante[1].nombre, espumante[1].precio, qPred, (espumante[1].precio * qPred)));
+            checkout.push(new listaCheckout(espumante[1].id, espumante[1].nombre, espumante[1].precio, qPred, (espumante[1].precio * qPred)));
             let agregado = document.getElementById("btn-agregar6")
             agregado.classList.add("disabled")
             agregado.innerText = "Agregado!"
@@ -64,7 +64,7 @@ function agregarAlCarritoBB() {
         .then(response => response.json())
         .then((productos) => {
             let espumante = productos.filter(tipo => tipo.tipo == "espumante")
-            checkout.push(new listaCheckout(espumante[2].nombre, espumante[2].precio, qPred, (espumante[2].precio * qPred)));
+            checkout.push(new listaCheckout(espumante[2].id, espumante[2].nombre, espumante[2].precio, qPred, (espumante[2].precio * qPred)));
             let agregado = document.getElementById("btn-agregar7")
             agregado.classList.add("disabled")
             agregado.innerText = "Agregado!"
@@ -78,7 +78,7 @@ function agregarAlCarritoBBR() {
         .then(response => response.json())
         .then((productos) => {
             let espumante = productos.filter(tipo => tipo.tipo == "espumante")
-            checkout.push(new listaCheckout(espumante[3].nombre, espumante[3].precio, qPred, (espumante[3].precio * qPred)));
+            checkout.push(new listaCheckout(espumante[3].id, espumante[3].nombre, espumante[3].precio, qPred, (espumante[3].precio * qPred)));
             let agregado = document.getElementById("btn-agregar8")
             agregado.classList.add("disabled")
             agregado.innerText = "Agregado!"

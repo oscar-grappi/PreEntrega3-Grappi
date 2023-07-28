@@ -40,7 +40,7 @@ function agregarAlCarritoRL() {
         .then(response => response.json())
         .then((productos) => {
             let bebidas = productos.filter(tipo => tipo.tipo == "bebida")
-            checkout.push(new listaCheckout(bebidas[0].nombre, bebidas[0].precio, qPred, (bebidas[0].precio * qPred)));
+            checkout.push(new listaCheckout(bebidas[0].id, bebidas[0].nombre, bebidas[0].precio, qPred, (bebidas[0].precio * qPred)));
             let agregado = document.getElementById("btn-agregar9")
             agregado.classList.add("disabled")
             agregado.innerText = "Agregado!"
@@ -53,7 +53,7 @@ function agregarAlCarritoBL() {
         .then(response => response.json())
         .then((productos) => {
             let bebidas = productos.filter(tipo => tipo.tipo == "bebida")
-            checkout.push(new listaCheckout(bebidas[1].nombre, bebidas[1].precio, qPred, (bebidas[1].precio * qPred)));
+            checkout.push(new listaCheckout(bebidas[1].id, bebidas[1].nombre, bebidas[1].precio, qPred, (bebidas[1].precio * qPred)));
             let agregado = document.getElementById("btn-agregar10")
             agregado.classList.add("disabled")
             agregado.innerText = "Agregado!"
@@ -66,7 +66,7 @@ function agregarAlCarritoAV() {
         .then(response => response.json())
         .then((productos) => {
             let bebidas = productos.filter(tipo => tipo.tipo == "bebida")
-            checkout.push(new listaCheckout(bebidas[2].nombre, bebidas[2].precio, qPred, (bebidas[2].precio * qPred)));
+            checkout.push(new listaCheckout(bebidas[2].id, bebidas[2].nombre, bebidas[2].precio, qPred, (bebidas[2].precio * qPred)));
             let agregado = document.getElementById("btn-agregar11")
             agregado.classList.add("disabled")
             agregado.innerText = "Agregado!"
@@ -79,7 +79,7 @@ function agregarAlCarritoJD() {
         .then(response => response.json())
         .then((productos) => {
             let bebidas = productos.filter(tipo => tipo.tipo == "bebida")
-            checkout.push(new listaCheckout(bebidas[3].nombre, bebidas[3].precio, qPred, (bebidas[3].precio * qPred)));
+            checkout.push(new listaCheckout(bebidas[3].id, bebidas[3].nombre, bebidas[3].precio, qPred, (bebidas[3].precio * qPred)));
             let agregado = document.getElementById("btn-agregar12")
             agregado.classList.add("disabled")
             agregado.innerText = "Agregado!"

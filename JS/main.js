@@ -1,3 +1,4 @@
+
 // - checkout
 
 let checkout = [];
@@ -5,7 +6,8 @@ let checkout = [];
 let checkoutArray = (clave, valor) => { localStorage.setItem(clave, valor) };
 
 class listaCheckout {
-    constructor(nombre, precio, cantidad, subtotal) {
+    constructor(id, nombre, precio, cantidad, subtotal) {
+        this.id = id
         this.nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;
@@ -18,6 +20,7 @@ let i = 1;
 let total = 0;
 let cantidad = 1;
 let idBebida;
+
 
 // ------------------------------ Funciones ------------------------------------ //
 
@@ -34,7 +37,7 @@ function printCheckOut() {
         <td class="nombre-producto"> ${producto.nombre} </td>
         <td class="precio-producto"> $ ${producto.precio} </td>
         <td class ="cantidad-producto"> 
-        <input class="cantidadProductos" type="number" value="1">
+        <input class="cantidadProductos" type="number" value = ${producto.cantidad} >
         </td>
         <td> <button type="button" class="btn btn-danger btn-eliminar" id="btn-eliminar${producto.id}">eliminar</button> </td>
         </tr>`
@@ -42,25 +45,6 @@ function printCheckOut() {
         
     });
 };
-
-// function printCheckOut() {
-
-//     checkout.forEach(producto => {
-
-//         let tablaCheckOut = document.getElementById("tablaCheckOut")
-//         let lista = document.createElement("tr");
-//         lista.classList.add("row-productos")
-//         lista.innerHTML =
-//             `<tr>
-//         <th scope="row"> ${i++} </th>
-//         <td class="nombre-producto"> ${producto.nombre} </td>
-//         <td class="precio-producto"> $ ${producto.precio} </td>
-//         <td class ="cantidad-producto"> ${cantidad} </td>
-//         <td> <button type="button" class="btn btn-danger btn-eliminar" id="btn-eliminar${producto.id}">eliminar</button> </td>
-//         </tr>`
-//         tablaCheckOut.appendChild(lista);
-//     });
-// };
 
 function guardarCarritoJSON() {
     checkoutArray("listaArray", JSON.stringify(checkout)) || [];
@@ -87,14 +71,17 @@ function actualizarCarrito() {
     totalCheckOut = 0
     for (let i = 0; i < lineaProductosCheckOut.length; i++) {
         let lineaProductos = lineaProductosCheckOut[i]
+        let productoNombre = lineaProductos.getElementsByClassName("nombre-producto")[0]
         let productoPrecio = lineaProductos.getElementsByClassName("precio-producto")[0]
         let productoCantidad = lineaProductos.getElementsByClassName("cantidadProductos")[0]
         let precio = parseFloat(productoPrecio.innerText.replace("$", ""))
         let cantidad = productoCantidad.value
+        let nombre = productoNombre.innerText
         totalCheckOut = totalCheckOut + (precio * cantidad)
     }
-    document.getElementById("totalCheckOut").innerText = "total:  $" + totalCheckOut
+    document.getElementById("totalCheckOut").innerText = "total:  $" + totalCheckOut    
 }
+
 // -------------------------------- Ejecuciones ---------------------------------- //
 
 bajarCarritoJSON()

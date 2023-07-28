@@ -35,7 +35,7 @@ function agregarAlCarritoRCM() {
         .then(response => response.json())
         .then((productos) => {
             let vino = productos.filter(tipo => tipo.tipo == "vino")
-            checkout.push(new listaCheckout(vino[0].nombre, vino[0].precio, qPred, (vino[0].precio * qPred)));
+            checkout.push(new listaCheckout(vino[0].id, vino[0].nombre, vino[0].precio, qPred, (vino[0].precio * qPred)));
             let agregado = document.getElementById("btn-agregar1")
             agregado.classList.add("disabled")
             agregado.innerText = "Agregado!"
@@ -49,7 +49,7 @@ function agregarAlCarritoNM() {
         .then(response => response.json())
         .then((productos) => {
             let vino = productos.filter(tipo => tipo.tipo == "vino")
-            checkout.push(new listaCheckout(vino[1].nombre, vino[1].precio, qPred, (vino[1].precio * qPred)));
+            checkout.push(new listaCheckout(vino[1].id, vino[1].nombre, vino[1].precio, qPred, (vino[1].precio * qPred)));
             let agregado = document.getElementById("btn-agregar2")
             agregado.classList.add("disabled")
             agregado.innerText = "Agregado!"
@@ -63,7 +63,7 @@ function agregarAlCarritoTM() {
         .then(response => response.json())
         .then((productos) => {
             let vino = productos.filter(tipo => tipo.tipo == "vino")
-            checkout.push(new listaCheckout(vino[2].nombre, vino[2].precio, qPred, (vino[2].precio * qPred)));
+            checkout.push(new listaCheckout(vino[2].id, vino[2].nombre, vino[2].precio, qPred, (vino[2].precio * qPred)));
             let agregado = document.getElementById("btn-agregar3")
             agregado.classList.add("disabled")
             agregado.innerText = "Agregado!"
@@ -77,7 +77,7 @@ function agregarAlCarritoECS() {
         .then(response => response.json())
         .then((productos) => {
             let vino = productos.filter(tipo => tipo.tipo == "vino")
-            checkout.push(new listaCheckout(vino[3].nombre, vino[3].precio, qPred, (vino[3].precio * qPred)));
+            checkout.push(new listaCheckout(vino[3].id, vino[3].nombre, vino[3].precio, qPred, (vino[3].precio * qPred)));
             let agregado = document.getElementById("btn-agregar4")
             agregado.classList.add("disabled")
             agregado.innerText = "Agregado!"
