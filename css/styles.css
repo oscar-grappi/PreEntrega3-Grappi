@@ -8,6 +8,15 @@ a{
     text-decoration: none;
 }
 
-input{
+.cantidadProductos{
     width: 70px;
+}
+
+.container_tajetas{
+    background-image: url(../img/fondo.webp);
+    height: 100vh;
+}
+
+#btn-continuar{
+    width: 100px;
 }

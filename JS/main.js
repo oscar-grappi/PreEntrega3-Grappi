@@ -4,6 +4,7 @@
 let checkout = [];
 
 let checkoutArray = (clave, valor) => { localStorage.setItem(clave, valor) };
+let totalCompra = (clave,valor) => {sessionStorage.setItem(clave,valor)}
 
 class listaCheckout {
     constructor(id, nombre, precio, cantidad, subtotal) {
@@ -42,8 +43,12 @@ function printCheckOut() {
         <td> <button type="button" class="btn btn-danger btn-eliminar" id="btn-eliminar${producto.id}">eliminar</button> </td>
         </tr>`
         tablaCheckOut.appendChild(lista);
-        
+
     });
+};
+
+function guardarTotalCompra() {
+    totalCompra("precioTotal", JSON.stringify(totalCheckOut)) || [];
 };
 
 function guardarCarritoJSON() {
@@ -79,9 +84,8 @@ function actualizarCarrito() {
         let nombre = productoNombre.innerText
         totalCheckOut = totalCheckOut + (precio * cantidad)
     }
-    document.getElementById("totalCheckOut").innerText = "total:  $" + totalCheckOut    
+    document.getElementById("totalCheckOut").innerText = "total:  $" + totalCheckOut
 }
-
 // -------------------------------- Ejecuciones ---------------------------------- //
 
 bajarCarritoJSON()

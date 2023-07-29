@@ -39,10 +39,13 @@
                             </ul>
                           </li>
                         <li class="nav-item justify-se">
-                            <a class="nav-link" href="./pages/carrito.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+                            <a class="nav-link" href="./pages/carrito.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
                                 <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
                               </svg></a>
                         </li>
+                        <li class="nav-item"><button type="button" class="btn" id="btnLogin"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                          </svg></button></li>
                     </ul>
                 </div>
             </div>
@@ -51,12 +54,12 @@
     </header>
 
     <main>
-        <div class="container mt-5 container_tajetas text-center">
-            <div class="row justify-content-center">
+        <div class="container-fluid p-5 container_tajetas ">
+            <div class="row align-items-center">
 
-                <div class="col">
+                <div class="col-4">
                     <a href="./pages/vinos.html" id="vinos">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card">
                             <img src="./img/vino.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h2 class="card-title text-center">Vinos</h2>
@@ -65,9 +68,9 @@
                     </a>
                 </div>
 
-                <div class="col">
+                <div class="col-4">
                     <a href="./pages/espumantes.html" id="espumantes">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card">
                             <img src="./img/champagne.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h2 class="card-title text-center">Espumantes</h2>
@@ -76,9 +79,9 @@
                     </a>
                 </div>
 
-                <div class="col">
+                <div class="col-4">
                     <a href="./pages/bebidas.html" id="bebidas">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card">
                             <img src="./img/whisky.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h2 class="card-title text-center">Bebidas</h2>
@@ -91,7 +94,7 @@
         </div>
     </main>
 
-    <footer class="fixed-bottom bg-secondary h-25">
+    <footer class="bg-secondary">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -107,6 +110,7 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="./JS/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
