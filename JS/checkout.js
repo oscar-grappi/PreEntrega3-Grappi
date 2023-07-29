@@ -73,7 +73,7 @@ botonComprar.onclick = () => {
         confirmarCompra = Swal.fire({
             title: 'queres finalizar la compra e ir al pago?',
             showDenyButton: true,
-            confirmButtonText: '<a href="./pago.html" style="color:white">si, quiero proseguir al pago</a>',
+            confirmButtonText: '<a href="./pagos.html" style="color:white">si, quiero proseguir al pago</a>',
             denyButtonText: `no! todavia me faltó algo`,
         }).then((result) => {
             if (result.isDenied) {

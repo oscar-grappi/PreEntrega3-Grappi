@@ -18,5 +18,7 @@ a{
 }
 
 #btn-continuar{
-    width: 100px;
+    width: 150px;
+    height: 50px;
+    margin-top: 1em;
 }
